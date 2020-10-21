@@ -1,0 +1,157 @@
+/* No CSS *//*# sourceMappingURL=style.css.map */
+
+/*reglas*/
+/*selector{ atributo:valor }
+/*Selector: A quién o quiénes le voy a aplicar la regla*/
+/*Atributo: qué es lo que voy a modificar?*/
+/*Valor: cómo deseo que quede?*/
+
+/*-------Selectores----------*/
+
+/*Selector universal: selecciona todos los elementos del DOM*/
+*{
+    color:brown
+}
+
+/*Selector por tagname: selecciona todos los elementos con el tagname indicado*/
+ul{
+    border:1px solid peru;
+    padding:1rem;
+    list-style:none;
+}
+
+/*Selector por clase: sirve para seleccionar un grupo de elementos que compartan la clase indicada*/
+.font-italic{
+    font-style: italic;
+}
+
+/*Selector por id: Selecciona el elemento que tenga asignado el id indicado*/
+#main-header{
+    font-size:3rem;
+    text-decoration: underline;
+}
+
+/*Selector anidado*/
+.bordered li{
+    height:30px;
+    border-bottom:1px solid #ccc;
+}
+
+/*selector combinado*/
+ol.bordered li{
+    height:50px;
+    border-bottom:1px solid #333;
+}
+
+.bg-gray{
+    background-color:slategray
+}
+
+.bg-dark-gray{
+    background-color: darkgray;
+}
+
+/*pseudoclases*/
+ul li:nth-of-type(odd){
+    background-color: slategray;
+}
+
+ul li:nth-of-type(even){
+    background-color: gray;
+}
+
+/*concatenación de selectores*/
+ul li:first-of-type,
+ul li:last-of-type
+{
+    text-transform: uppercase;
+    background: none;
+}
+
+ul li:not(.active){
+    font-weight:bold;
+}
+
+.hamburger-wrapper{
+    width:200px;
+    border:1px solid red;
+    position:relative;
+}
+
+.hamburger-wrapper label{
+    width:50px;
+    height:50px;
+    border:1px solid #333;
+    border-radius:5px;
+    display:block;
+    cursor:pointer;
+}
+
+.hamburger-wrapper label:before{
+    content: "";
+    display: block;
+    width: 70%;
+    border-radius: 3px;
+    border: 2px solid #333;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8px;
+    box-shadow: 0 15px #333, 0 30px #333;
+}
+
+.hamburger-wrapper ul{
+    list-style: none;
+    background:#acacac;
+    padding:5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease;
+}
+
+.hamburger-wrapper ul li:not(:last-of-type){
+    height:30px;
+    border-bottom:1px solid #dadada;
+}
+
+/*selector de elementos subsecuentes*/
+.hamburger-wrapper #hamburger:not(:checked) ~ ul{
+    max-height: 150px;
+}
+
+.hamburger-wrapper #hamburger{
+    display:none;
+}
+
+/*selector de hermano adyacente*/
+li.active + li{
+    font-size:2rem;
+}
+
+/*selector de hijo inmediato*/
+ul.some-class > li{
+
+}
+
+/*selector por atributo*/
+
+input[value="Israel"]{
+
+}
+
+div[class^="circle"]{ /*todos los div cuya clase comience con "circle"*/
+    width:50px;
+    height:50px;
+    border-radius:50px;
+}
+
+.circle-red{
+    background:red
+}
+
+.circle-blue{
+    background: blue;
+}
+
+.circle-pink{
+    background: pink;
+}
