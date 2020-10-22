@@ -1,0 +1,7 @@
+$lime-green: hsl(136, 65%, 51%);
+$bright-cyan: hsl(192, 70%, 51%);
+
+.btn-rainbow{
+    background-image: linear-gradient(to right, $lime-green , $bright-cyan);
+    color:white;
+}

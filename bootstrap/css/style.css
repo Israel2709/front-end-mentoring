@@ -1,0 +1,6 @@
+.btn-rainbow {
+  background-image: -webkit-gradient(linear, left top, right top, from(#31d35c), to(#2bb7da));
+  background-image: linear-gradient(to right, #31d35c, #2bb7da);
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
